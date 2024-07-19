@@ -10,31 +10,19 @@
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
-
-@interface ViewController ()
-
-@end
+extern int socks_main(int argc, const char** argv);
+const int port = 6886;
 
 @implementation ViewController
 
-extern int socks_main(int argc, const char** argv);
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    int port = 4884;
-
+    [self.statusLabel setText:[NSString stringWithFormat:@"Socks5 Srv Running at %@:%d", [[self class] deviceIPAddress], port]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         char portbuf[32];
         sprintf(portbuf, "%d", port);
         const char *argv[] = {"microsocks", "-p", portbuf, NULL};
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.statusLabel setText:[NSString stringWithFormat:@"Socks5 Srv Running at %@:%d", [[self class] deviceIPAddress], port]];
-        });
-
         int status = socks_main(3, argv);
-
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.statusLabel setText:[NSString stringWithFormat:@"Failed to start: %d", status]];
         });
@@ -45,20 +33,12 @@ extern int socks_main(int argc, const char** argv);
     });
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(void)testHttpRequest{
     NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/gaoxiaowei/relay_proxy_test/master/relay_config.json"];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
 
     NSString *proxyHost = @"localhost";
-    NSNumber *proxyPort = @4884;
-//    NSString *proxyHost = @"10.17.25.31";
-//    NSNumber *proxyPort = @1082;
+    NSNumber *proxyPort = @(port);
     NSString *kCFNetworkProxiesSOCKSProxy = @"SOCKSProxy";
     NSString *kCFNetworkProxiesSOCKSPort = @"SOCKSPort";
     NSString *kSOCKSEnable =@"SOCKSEnable";
@@ -90,8 +70,7 @@ extern int socks_main(int argc, const char** argv);
     [task resume];
 }
 
-+ (NSString *)deviceIPAddress
-{
++ (NSString *)deviceIPAddress{
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;

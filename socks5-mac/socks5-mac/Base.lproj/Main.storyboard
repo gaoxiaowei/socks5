@@ -709,9 +709,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNl-BV-lZR" userLabel="Status Label">
-                                <rect key="frame" x="-2" y="137" width="484" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oNl-BV-lZR" userLabel="Status Label">
+                                <rect key="frame" x="199" y="127" width="83" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Not Running" placeholderString="Not Running" id="wMt-k5-DQm">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -719,6 +718,10 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="oNl-BV-lZR" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Irs-YK-JPJ"/>
+                            <constraint firstItem="oNl-BV-lZR" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Zzf-iN-WQH"/>
+                        </constraints>
                         <connections>
                             <accessibilityConnection property="link" destination="oNl-BV-lZR" id="nuN-GR-AsA"/>
                         </connections>

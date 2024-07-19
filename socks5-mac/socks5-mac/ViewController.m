@@ -6,26 +6,22 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+#include "TargetConditionals.h"
+#include <ifaddrs.h>
+#include <arpa/inet.h>
 
 extern int socks_main(int argc, const char** argv);
+const int port = 6886;
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    int port = 4884;
-
+    [self.statusLabel setStringValue:[NSString stringWithFormat:@"Socks5 Srv Running at %@:%d", [[self class] deviceIPAddress], port]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         char portbuf[32];
         sprintf(portbuf, "%d", port);
         const char *argv[] = {"microsocks", "-p", portbuf, NULL};
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.statusLabel setStringValue:[NSString stringWithFormat:@"Socks5 Srv Running at %@:%d", [AppDelegate deviceIPAddress], port]];
-        });
-
         int status = socks_main(3, argv);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.statusLabel setStringValue:[NSString stringWithFormat:@"Socks5 Srv Failed to start: %d", status]];
@@ -49,9 +45,7 @@ extern int socks_main(int argc, const char** argv);
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
 
     NSString *proxyHost = @"localhost";
-    NSNumber *proxyPort = @4884;
-//   NSString *proxyHost = @"10.17.24.245";
-//   NSNumber *proxyPort = @1082;
+    NSNumber *proxyPort = @(port);
     NSDictionary *proxyDict = @{
         (NSString *)kCFNetworkProxiesSOCKSEnable : @1,
         (NSString *)kCFNetworkProxiesSOCKSProxy: proxyHost,
@@ -89,4 +83,36 @@ extern int socks_main(int argc, const char** argv);
 
     [task resume];
 }
+
++ (NSString *)deviceIPAddress{
+    NSString *address = @"error";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+
+    NSString *networkInterface = @"en0";
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while (temp_addr != NULL) {
+            if( temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:networkInterface]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+
+    // Free memory
+    freeifaddrs(interfaces);
+
+    return address;
+}
+
 @end
