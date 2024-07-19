@@ -9,6 +9,7 @@
 #include "TargetConditionals.h"
 #include <ifaddrs.h>
 #include <arpa/inet.h>
+#import "WebBrowserViewController.h"
 
 extern int socks_main(int argc, const char** argv);
 const int port = 6886;
@@ -68,6 +69,10 @@ const int port = 6886;
     [task setValue:proxyDict.copy
             forKey:@"_proxySettings"];
     [task resume];
+}
+- (IBAction)onBrowserBtnClick:(id)sender {
+    WebBrowserViewController *webBrowserViewController = [[WebBrowserViewController alloc] initWithSocks5Proxy:@"localhost" socks5Port:port];
+    [self presentViewController:webBrowserViewController animated:YES completion:nil];
 }
 
 + (NSString *)deviceIPAddress{

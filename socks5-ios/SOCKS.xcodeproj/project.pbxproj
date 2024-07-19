@@ -16,6 +16,7 @@
 		BFB02AA42C4A4D05005CF31F /* sblist.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A972C4A4D04005CF31F /* sblist.c */; };
 		BFB02AA52C4A4D05005CF31F /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A992C4A4D04005CF31F /* server.c */; };
 		BFB02AA62C4A4D05005CF31F /* sockssrv.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A9B2C4A4D04005CF31F /* sockssrv.c */; };
+		BFB02AA92C4A6A0C005CF31F /* WebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB02AA82C4A6A0C005CF31F /* WebBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		BFB02A9A2C4A4D04005CF31F /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
 		BFB02A9B2C4A4D04005CF31F /* sockssrv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sockssrv.c; sourceTree = "<group>"; };
 		BFB02A9C2C4A4D04005CF31F /* sockssrv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sockssrv.h; sourceTree = "<group>"; };
+		BFB02AA72C4A6A0C005CF31F /* WebBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebBrowserViewController.h; sourceTree = "<group>"; };
+		BFB02AA82C4A6A0C005CF31F /* WebBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebBrowserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				7F1F2722212A29D600540E3A /* AppDelegate.m */,
 				7F1F2724212A29D600540E3A /* ViewController.h */,
 				7F1F2725212A29D600540E3A /* ViewController.m */,
+				BFB02AA72C4A6A0C005CF31F /* WebBrowserViewController.h */,
+				BFB02AA82C4A6A0C005CF31F /* WebBrowserViewController.m */,
 				7F1F2727212A29D600540E3A /* Main.storyboard */,
 				7F1F272A212A29D600540E3A /* Assets.xcassets */,
 				7F1F272C212A29D600540E3A /* LaunchScreen.storyboard */,
@@ -170,6 +175,7 @@
 				BFB02AA62C4A4D05005CF31F /* sockssrv.c in Sources */,
 				BFB02AA42C4A4D05005CF31F /* sblist.c in Sources */,
 				BFB02AA52C4A4D05005CF31F /* server.c in Sources */,
+				BFB02AA92C4A6A0C005CF31F /* WebBrowserViewController.m in Sources */,
 				7F1F2723212A29D600540E3A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
