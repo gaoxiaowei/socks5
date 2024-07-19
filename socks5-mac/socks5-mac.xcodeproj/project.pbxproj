@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFB02A522C49159E005CF31F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A512C49159E005CF31F /* AppDelegate.m */; };
+		BFB02A552C49159E005CF31F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A542C49159E005CF31F /* ViewController.m */; };
+		BFB02A572C4915A1005CF31F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB02A562C4915A1005CF31F /* Assets.xcassets */; };
+		BFB02A5A2C4915A1005CF31F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BFB02A592C4915A1005CF31F /* Base */; };
+		BFB02A5C2C4915A1005CF31F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A5B2C4915A1005CF31F /* main.m */; };
+		BFB02A8E2C4A4CA5005CF31F /* sblist.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A872C4A4CA5005CF31F /* sblist.c */; };
+		BFB02A8F2C4A4CA5005CF31F /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A892C4A4CA5005CF31F /* server.c */; };
+		BFB02A902C4A4CA5005CF31F /* sockssrv.c in Sources */ = {isa = PBXBuildFile; fileRef = BFB02A8B2C4A4CA5005CF31F /* sockssrv.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BFB02A4D2C49159E005CF31F /* socks5-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "socks5-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB02A502C49159E005CF31F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFB02A512C49159E005CF31F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFB02A532C49159E005CF31F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BFB02A542C49159E005CF31F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BFB02A562C4915A1005CF31F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFB02A592C4915A1005CF31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFB02A5B2C4915A1005CF31F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFB02A5D2C4915A1005CF31F /* socks5_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socks5_mac.entitlements; sourceTree = "<group>"; };
+		BFB02A872C4A4CA5005CF31F /* sblist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sblist.c; sourceTree = "<group>"; };
+		BFB02A882C4A4CA5005CF31F /* sblist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sblist.h; sourceTree = "<group>"; };
+		BFB02A892C4A4CA5005CF31F /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
+		BFB02A8A2C4A4CA5005CF31F /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
+		BFB02A8B2C4A4CA5005CF31F /* sockssrv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sockssrv.c; sourceTree = "<group>"; };
+		BFB02A8C2C4A4CA5005CF31F /* sockssrv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sockssrv.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFB02A4A2C49159E005CF31F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFB02A442C49159E005CF31F = {
+			isa = PBXGroup;
+			children = (
+				BFB02A4F2C49159E005CF31F /* socks5-mac */,
+				BFB02A4E2C49159E005CF31F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFB02A4E2C49159E005CF31F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFB02A4D2C49159E005CF31F /* socks5-mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFB02A4F2C49159E005CF31F /* socks5-mac */ = {
+			isa = PBXGroup;
+			children = (
+				BFB02A8D2C4A4CA5005CF31F /* microsocks */,
+				BFB02A502C49159E005CF31F /* AppDelegate.h */,
+				BFB02A512C49159E005CF31F /* AppDelegate.m */,
+				BFB02A532C49159E005CF31F /* ViewController.h */,
+				BFB02A542C49159E005CF31F /* ViewController.m */,
+				BFB02A562C4915A1005CF31F /* Assets.xcassets */,
+				BFB02A582C4915A1005CF31F /* Main.storyboard */,
+				BFB02A5B2C4915A1005CF31F /* main.m */,
+				BFB02A5D2C4915A1005CF31F /* socks5_mac.entitlements */,
+			);
+			path = "socks5-mac";
+			sourceTree = "<group>";
+		};
+		BFB02A8D2C4A4CA5005CF31F /* microsocks */ = {
+			isa = PBXGroup;
+			children = (
+				BFB02A872C4A4CA5005CF31F /* sblist.c */,
+				BFB02A882C4A4CA5005CF31F /* sblist.h */,
+				BFB02A892C4A4CA5005CF31F /* server.c */,
+				BFB02A8A2C4A4CA5005CF31F /* server.h */,
+				BFB02A8B2C4A4CA5005CF31F /* sockssrv.c */,
+				BFB02A8C2C4A4CA5005CF31F /* sockssrv.h */,
+			);
+			path = microsocks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFB02A4C2C49159E005CF31F /* socks5-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFB02A602C4915A1005CF31F /* Build configuration list for PBXNativeTarget "socks5-mac" */;
+			buildPhases = (
+				BFB02A492C49159E005CF31F /* Sources */,
+				BFB02A4A2C49159E005CF31F /* Frameworks */,
+				BFB02A4B2C49159E005CF31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "socks5-mac";
+			productName = "socks5-mac";
+			productReference = BFB02A4D2C49159E005CF31F /* socks5-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFB02A452C49159E005CF31F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					BFB02A4C2C49159E005CF31F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = BFB02A482C49159E005CF31F /* Build configuration list for PBXProject "socks5-mac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFB02A442C49159E005CF31F;
+			productRefGroup = BFB02A4E2C49159E005CF31F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFB02A4C2C49159E005CF31F /* socks5-mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFB02A4B2C49159E005CF31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB02A572C4915A1005CF31F /* Assets.xcassets in Resources */,
+				BFB02A5A2C4915A1005CF31F /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFB02A492C49159E005CF31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB02A552C49159E005CF31F /* ViewController.m in Sources */,
+				BFB02A5C2C4915A1005CF31F /* main.m in Sources */,
+				BFB02A8E2C4A4CA5005CF31F /* sblist.c in Sources */,
+				BFB02A902C4A4CA5005CF31F /* sockssrv.c in Sources */,
+				BFB02A8F2C4A4CA5005CF31F /* server.c in Sources */,
+				BFB02A522C49159E005CF31F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFB02A582C4915A1005CF31F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFB02A592C4915A1005CF31F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFB02A5E2C4915A1005CF31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BFB02A5F2C4915A1005CF31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BFB02A612C4915A1005CF31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "socks5-mac/socks5_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "microsoft.socks5-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		BFB02A622C4915A1005CF31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "socks5-mac/socks5_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "microsoft.socks5-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFB02A482C49159E005CF31F /* Build configuration list for PBXProject "socks5-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFB02A5E2C4915A1005CF31F /* Debug */,
+				BFB02A5F2C4915A1005CF31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFB02A602C4915A1005CF31F /* Build configuration list for PBXNativeTarget "socks5-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFB02A612C4915A1005CF31F /* Debug */,
+				BFB02A622C4915A1005CF31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFB02A452C49159E005CF31F /* Project object */;
+}
