@@ -41,7 +41,7 @@ const int port = 6886;
 }
 
 -(void)testHttpRequest{
-    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/gaoxiaowei/socks5/master/test.json"];
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/gaoxiaowei/socks5/main/test.json"];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
 
     NSString *proxyHost = @"localhost";
