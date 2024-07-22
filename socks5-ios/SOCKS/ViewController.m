@@ -35,7 +35,7 @@ const int port = 6886;
 }
 
 -(void)testHttpRequest{
-    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/gaoxiaowei/relay_proxy_test/master/relay_config.json"];
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/gaoxiaowei/socks5/master/test.json"];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
 
     NSString *proxyHost = @"localhost";
