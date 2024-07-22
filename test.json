@@ -1,0 +1,43 @@
+{
+    "default": [{
+            "proxy_type": "http",
+            "host_name": "172.208.53.200",
+            "port": "3128",
+            "failover_allowed":0,
+            "match_domains": [
+                "baidu.com",
+                "google.com"
+            ],
+            "excluded_domains": [
+                "xvideos.com",
+                "apple.com"
+            ]
+        },
+        {
+            "proxy_type": "http2",
+            "host_name": "hecksong.net",
+            "port": "443",
+            "failover_allowed":0,
+            "match_domains": [
+                "sina.cn",
+                "youku.com"
+            ],
+            "excluded_domains": [
+                "microsoft.com"
+            ]
+        },
+        {
+            "proxy_type": "http3",
+            "hostname": "relay.example.com",
+            "port": "443",
+            "failover_allowed":0,
+            "match_domains": [
+                "github.com"
+            ],
+            "excluded_domains": [
+                "openai.com"
+            ]
+        }
+    ]
+
+}
